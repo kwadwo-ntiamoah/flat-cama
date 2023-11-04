@@ -1,7 +1,10 @@
 import 'package:cama_mod/views/about/about.dart';
 import 'package:cama_mod/views/archives/archives.dart';
 import 'package:cama_mod/views/bible/bible.dart';
-import 'package:cama_mod/views/cama/cama.dart';
+import 'package:cama_mod/views/cama/cama_apply.dart';
+import 'package:cama_mod/views/cama/cama_intro.dart';
+import 'package:cama_mod/views/cama/cama_join.dart';
+import 'package:cama_mod/views/cama/cama_subscriptions.dart';
 import 'package:cama_mod/views/checkout/checkout.dart';
 import 'package:cama_mod/views/contact/contact.dart';
 import 'package:cama_mod/views/dashboard/dashboard.dart';
@@ -80,7 +83,19 @@ final router = GoRouter(routes: [
   GoRoute(
       path: "/cama",
       name: "cama",
-      builder: (ctx, state) => const CamaView()),
+      builder: (ctx, state) => const CamaIntroView()),
+  GoRoute(
+      path: "/cama_join",
+      name: "cama_join",
+      builder: (ctx, state) => const CamaJoin()),
+  GoRoute(
+      path: "/cama_subscription",
+      name: "cama_subscription",
+      builder: (ctx, state) => const CamaSubscriptions()),
+  GoRoute(
+      path: "/cama_apply",
+      name: "cama_apply",
+      builder: (ctx, state) => const CamaApply()),
   GoRoute(path: "/tv", name: "tv", builder: (ctx, state) => const TvView()),
   GoRoute(path: "/tvFullScreen", name: "tvFullScreen", builder: (ctx, state) {
     String url = state.extra as String;

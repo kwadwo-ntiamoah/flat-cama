@@ -29,9 +29,11 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.openSansTextTheme(KTextTheme.textTheme),
           inputDecorationTheme: TextFieldTheme.textFieldTheme,
           primaryColor: KColors.kPrimaryColor,
+          primaryColorDark: KColors.kLightColor,
           colorScheme: ColorScheme.fromSwatch().copyWith(
             secondary: KColors.kLightColor,
           ),
+          useMaterial3: false
         ),
         routerConfig: router,
       ),

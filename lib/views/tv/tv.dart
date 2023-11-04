@@ -22,6 +22,7 @@ class TvView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: KColors.kLightColor,
       appBar: AppBar(
         systemOverlayStyle:
             SystemUiOverlayStyle(statusBarColor: KColors.kLightColor),

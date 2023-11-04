@@ -18,6 +18,7 @@ class RadioView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
           elevation: 0,
           automaticallyImplyLeading: true,
@@ -30,20 +31,30 @@ class RadioView extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              color: KColors.kLightColor.withOpacity(.6),
+              padding: EdgeInsets.zero,
+              color: KColors.kLightColor,
+              width: double.infinity,
               child: TabBar(
                 unselectedLabelColor: KColors.kDarkColor,
                 labelStyle:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: KColors.kTextColorLight),
+                padding: EdgeInsets.zero,
                 indicator: BoxDecoration(color: KColors.kPrimaryColor),
+                indicatorPadding: EdgeInsets.zero,
                 tabs: const <Widget>[
-                  Tab(
-                    text: 'Now Playing',
-                    height: 50,
+                  SizedBox(
+                    width: double.infinity,
+                    child: Tab(
+                      text: 'Now Playing',
+                      height: 50,
+                    ),
                   ),
-                  Tab(
-                    text: 'Schedule',
-                    height: 50,
+                  SizedBox(
+                    width: double.infinity,
+                    child: Tab(
+                      text: 'Schedule',
+                      height: 50,
+                    ),
                   )
                 ],
               ),
